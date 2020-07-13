@@ -9,4 +9,4 @@ KaKaotalk Bot
 
 etc
 ===
-[API리스트](https://deviolet.tistory.com/entry/%EB%A9%94%EC%8B%A0%EC%A0%80%EB%B4%87-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%A0%88%EA%B1%B0%EC%8B%9C-API, "go API")
+[API리스트](https://deviolet.tistory.com/entry/%EB%A9%94%EC%8B%A0%EC%A0%80%EB%B4%87-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%A0%88%EA%B1%B0%EC%8B%9C-API, "go to Dev Blog")
