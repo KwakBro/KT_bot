@@ -9,4 +9,4 @@ KaKaotalk Bot
 
 etc
 ===
-[API리스트](https://deviolet.tistory.com/entry/메신저봇-가이드-레거시-API, "go to Dev Blog")
+[API리스트](https://deviolet.tistory.com/entry/메신저봇-가이드-레거시-API ,"go to Dev Blog")
