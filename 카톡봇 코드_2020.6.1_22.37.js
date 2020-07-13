@@ -8,8 +8,8 @@ const scriptName = "bot";
  * (string) imageDB.getProfileBase64()
  * (string) packageName
  */
- 
-var finance_path = "/storage/emulated/0/mybot/finance.txt";
+
+var finance_path = "/storage/emulated/0/mybot/finance.txt";  // 일종의 DB
 var alram_path = "/storage/emulated/0/mybot/alram.txt";
 
 function del(sender,path,keyword) {
@@ -37,7 +37,7 @@ function del(sender,path,keyword) {
 
 function response(params) {
   
-   ///////////////////////////////////////////////////////////////////////////////////////////   this is for 증권
+   ///////////////////////////////////////////////////////////////////////////////////////////   리딩방 정보
   if(params.sender == "◈ 【 김유리_마녀 】"){
     
     if(params.msg != "사진을 보냈습니다."){
@@ -45,11 +45,11 @@ function response(params) {
       params.replier.reply("Test",text);
     }
   }
-   ///////////////////////////////////////////////////////////////////////////////////////////    this is for 증권
+   //////////////////////////////////////////////////////////////////////////////////////////
    
    
    
-   
+   /* 사용자는 /명령어 인자 방식으로 입력 */
    if(params.msg[0] == '/' ){
      
      var arr = params.msg.split(" ");
@@ -70,7 +70,7 @@ function response(params) {
             else {
                 text = "제 생각엔 " + arr[2] + "이(가) 낫습니다  "; }
             if( arr[1] == "국밥" | arr[2] == "국밥" ){
-                text = "아니 뜨끈한 국밥을 두고 뭘고민하노 ㅋㅋㅋ"; }
+                text = "아니 뜨끈한 국밥을 두고 뭘고민하누 ㅋㅋ"; }
             params.replier.reply(text);
         }// end VS func    
         
@@ -81,7 +81,7 @@ function response(params) {
           var name1 = Utils.getWebText("https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=" + arr[1]);
       
           if(name1.indexOf("\"stock_content\"") == -1){
-            text = "그런거 없다.....";
+            text = "존재하지 않는 기업입니다";
             params.replier.reply(text);
           }
           else {
@@ -95,7 +95,7 @@ function response(params) {
                   var name4 = name3[1].split("</span>");
                   var name5 = name4[0].split(" ");
                   
-                  var day1 = name1.split("<div class=\"grp_info\"> <span class=\"time\">");    //날 자 
+                  var day1 = name1.split("<div class=\"grp_info\"> <span class=\"time\">");    //요청 날짜 
                   var day2 = day1[1].split("</span>");
                   var day = day2[0].replace(/(<([a-z^>]+)>)/g,"");
                   
